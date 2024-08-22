@@ -13,13 +13,27 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
+      <!-- !custom css incloding -->
+      <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(139, 195, 74)',
+                    },
+                    fontFamily: {
+                        manrope: 'Manrope',
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 <body class="font-manrope">
       <header class="">
         <!--* navbar section  -->
             <nav>
-              <div class="md:w-10/12 mx-auto navbar bg-base-100">
+              <div class=" md:w-11/12 mx-auto navbar bg-base-100">
                 <div class="navbar-start">
                   <a class="btn btn-ghost text-2xl font-bold"><i class="fa-solid fa-arrow-right bg-lime-400 px-2 py-2 -rotate-45 rounded-full"></i>Rinterio</a>
                 </div>
@@ -38,7 +52,7 @@
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
+                        class="h-8 w-8"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -51,7 +65,7 @@
                     </div>
                     <ul
                       tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow right-5 w-40">
                       <li><a>Item 1</a></li>
                       <li><a>Item 3</a></li>
                     </ul>
@@ -60,8 +74,16 @@
               </div>
             </nav>
         <!--* banner section -->
-            <section>
-              
+            <section class="container md:w-11/12 mx-auto mt-12">
+              <div class="flex flex-col justify-center items-center text-center">
+                <div>
+                  <img src="./assets/banner.png" alt="">
+                </div>
+                <h1 class="md:text-6xl text-3xl font-extrabold">A barn house of this design has a <br class="hidden md:flex"> striking appearance</h1>
+                <p class="md:text-lg text-sm text-gray-500 my-8">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal <br class="hidden md:flex"> accents, and large windows that flood the space with natural light.</p>
+                <button class=" btn text-center px-8 rounded-full text-lg font-extrabold bg-lime-200"> View Details <i class="fa-solid fa-arrow-right bg-lime-400 px-2 py-2 -rotate-45 rounded-full ml-2"></i></button>
+              </div>
+
             </section>
       </header>
       <main>
